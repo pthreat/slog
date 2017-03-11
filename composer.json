@@ -13,7 +13,9 @@
 	],
 	"autoload": {
 					"psr-4":{
-								"stange\\logging\\":["src","src/iface/","src/traits/"]
+								"stange\\logging\\":"src",
+								"stange\\logging\\slog\\iface\\":"src/iface/",
+								"stange\\logging\\slog\\traits\\":"src/traits/"
 					}
 	},
 	"require": {
