@@ -1,0 +1,22 @@
+{
+	"name": "stange/slog",
+	"type": "library",
+	"description": "A simple PHP logging class",
+	"keywords": ["log","logging","console"],
+	"license": "MIT",
+	"authors": [
+					{
+						"name": "Federico Stange",
+						"email": "jpfstange@gmail.com",
+						"role": "Developer"
+					}
+	],
+	"autoload": {
+					"psr-4":{
+								"stange\\logging\\":"src"
+					}
+	},
+	"require": {
+		"php": "^5.3.3 || ^7.0"
+	}
+}
