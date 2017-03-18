@@ -6,28 +6,29 @@
 
 Slog is a simple PHP logging class which you can easily include in any of your projects.
 
-## Getting started
+## Installing Slog
 
-### Clone the latest version from GIT
+### You can clone the latest version from GIT
 ```
 git clone https://github.com/pthreat/slog.git
 ```
 
-### Add to your project via composer
+### Or just add Slog to your project via composer
 ```
 composer require stange/slog
 ```
 
 ## Features
 
-- ANSI output coloring
-- Log to a file
-- Log tags
-- Prepend or append a log string
-- Prefix your log messages with a specific date format
+- [x] ANSI output coloring
+- [x] Log to a file
+- [x] Log tags (see below)
+- [x] Prepend or append a log string
+- [x] Prefix your log messages with a specific date format
 
 ## Examples
-#### Basic Example
+
+### Basic Example
 
 ```php
 use \stange\logging\Slog;
@@ -38,7 +39,7 @@ $log->log('Scotty, beam me up!');
 ```
 ---
 
-#### Using specific log types types and ANSI coloring capabilities
+### Using specific log types types and ANSI coloring capabilities
 
 Slog contains different methods for you to inform different types of log messages.
 Also, by default, SLog will colorize your log output
@@ -78,7 +79,7 @@ $log->debug('Debug');
 ```
 ---
 
-#### Log to a file
+### Log to a file
 
 ```php
 use \stange\logging\Slog;
@@ -94,7 +95,7 @@ $log->log('Log to a file (and to stdout)');
 
 ---
 
-#### File only output example
+### File only output example
 
 In case you don't want to output to stdout, you can pass in **'echo'=>FALSE** in the constructor
 or disable stdout output by using **Slog::setEcho(FALSE)**.
@@ -113,13 +114,13 @@ $log->log("No stdout log, file only");
 ```
 ---
 
-#### Log Tagging
+## Log Tagging
 
 ###### Logging is a great thing, however sometimes the amount of logged information can be cumbersome.
 
 ** A cool feature of Slog is that you can tag your logs. **
 
-#### Tag your logs? What do you mean?
+### Tag your logs? What do you mean?
 
 I mean that you can use certain "tags" in your log messages for logging messages of a certain kind but not others of a different kind.
 
@@ -172,7 +173,7 @@ $log->log('tagTwo@@@This is another tagged message with the tagTwo');
 
 ```
 
-#### Adding or removing log tags on the run
+### Adding or removing log tags on the run
 
 You can add or remove a tag at any given point in time through the methods:
 
@@ -181,7 +182,7 @@ You can add or remove a tag at any given point in time through the methods:
 - **Slog::unsetTags()** Log everything
 
 
-# Loggable Trait and Loggable Interface
+### Loggable Trait and Loggable Interface
 
 As an extra, I have included a simple logging trait which will enable you to use said trait
 in your own classes to make said class "Loggable", this trait contains three main methods:
@@ -264,4 +265,9 @@ namespace myProject{
 	$myOtherClass->doSomething();
 
 ```
+---
 
+## TODO (next release)
+
+- [ ] Create an adapter pattern for logging messages in different places
+- [ ] Add logging adapters (Socket, File, Memory, etc)
