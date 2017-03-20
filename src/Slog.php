@@ -505,6 +505,12 @@
 				return $this->log("[SS] $text",'lgreen');	
 				
 			}
+
+			public function alert($text=NULL){
+
+				return $this->log("[**] $text",'alert');	
+			
+			}
 	
 			/**
 			 * Specifies that each logged message should be echoed to stdout.
